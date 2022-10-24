@@ -1,0 +1,35 @@
+# Settings Server
+server:
+  port: 8090
+
+# mybatis config
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+# Settings Spring
+spring:
+  # Database
+  datasource:
+    url: jdbc:mariadb://localhost:3306/local_mariadb?serverTimezone=JST
+    username: admin
+    password: password
+    driver-class-name: org.mariadb.jdbc.Driver
+  # Logging Color
+  output:
+    ansi:
+      enabled: always
+  # Mail
+  mail:
+    host: localhost
+    username:
+    password:
+    properties:
+      mail:
+        transport:
+          protocol: smtp
+        smtp:
+          port: 1025
+api:
+  mail:
+    from: app@example.com

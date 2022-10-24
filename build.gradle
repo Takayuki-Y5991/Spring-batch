@@ -1,0 +1,58 @@
+plugins {
+	id 'org.springframework.boot' version '2.7.5'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+	id 'java'
+	id "com.thinkimi.gradle.MybatisGenerator" version "2.4"
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-batch'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.batch:spring-batch-test'
+
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-mail
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-mail', version: '2.7.5'
+	// https://mvnrepository.com/artifact/mysql/mysql-connector-java
+	implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.30'
+	// https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client
+	implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '3.0.6'
+	// https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter
+	implementation group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '2.2.2'
+	// https://mvnrepository.com/artifact/org.mybatis.dynamic-sql/mybatis-dynamic-sql
+	implementation group: 'org.mybatis.dynamic-sql', name: 'mybatis-dynamic-sql', version: '1.4.0'
+	// https://mvnrepository.com/artifact/org.mybatis.generator/mybatis-generator-core
+	implementation group: 'org.mybatis.generator', name: 'mybatis-generator-core', version: '1.4.1'
+
+}
+
+// Mybatis Generator Configuration
+mybatisGenerator {
+	verbose = true
+	configFile = "src/main/resources/mybatis/generatorConfiguration.xml"
+
+	dependencies {
+		mybatisGenerator 'org.mybatis.generator:mybatis-generator-core:1.4.1'
+		mybatisGenerator 'mysql:mysql-connector-java:8.0.30'
+		mybatisGenerator 'org.mariadb.jdbc:mariadb-java-client:3.0.6'
+	}
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
