@@ -17,7 +17,7 @@
                             targetProject="src/main/java">
         </javaModelGenerator>
         <!-- Client Settings -->
-        <javaClientGenerator targetPackage="com.example.baseBatch.client.repository"
+        <javaClientGenerator targetPackage="com.example.baseBatch.client.mybatis"
                              targetProject="src/main/java">
             <property name="rootInterface" value="org.mybatis.dynamic.sql.util.mybatis3.CommonSelectMapper"/>
         </javaClientGenerator>
@@ -29,12 +29,12 @@
         <table tableName="book_return" domainObjectName="BookReturnEntity">
             <generatedKey column="book_return_id" sqlStatement="SELECT LAST_INSERT_ID()"/>
         </table>
+        <table tableName="book_rental" domainObjectName="BookRentalEntity">
+            <generatedKey column="book_rental_id" sqlStatement="SELECT LAST_INSERT_ID()"/>
+        </table>
         <!-- Member relations -->
         <table tableName="member" domainObjectName="MemberEntity">
             <generatedKey column="member_id" sqlStatement="SELECT LAST_INSERT_ID()"/>
-        </table>
-        <table tableName="book_rental" domainObjectName="BookRentalEntity">
-            <generatedKey column="book_rental_id" sqlStatement="SELECT LAST_INSERT_ID()"/>
         </table>
     </context>
 

@@ -1,40 +1,41 @@
-package com.example.baseBatch.client.repository;
+package com.example.baseBatch.client.mybatis;
 
-import java.sql.JDBCType;
-import java.time.LocalDate;
-import javax.annotation.Generated;
 import org.mybatis.dynamic.sql.AliasableSqlTable;
 import org.mybatis.dynamic.sql.SqlColumn;
 
+import javax.annotation.Generated;
+import java.sql.JDBCType;
+import java.time.LocalDate;
+
 public final class BookEntityDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2022-10-23T22:09:22.425324052+09:00", comments="Source Table: book")
+    @Generated(value = "org.mybatis.generator.api.MyBatisGenerator", date = "2022-12-06T23:23:42.810567273+09:00", comments = "Source Table: book")
     public static final BookEntity bookEntity = new BookEntity();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2022-10-23T22:09:22.425748548+09:00", comments="Source field: book.book_id")
+    @Generated(value = "org.mybatis.generator.api.MyBatisGenerator", date = "2022-12-06T23:23:42.810762303+09:00", comments = "Source field: book.book_id")
     public static final SqlColumn<String> bookId = bookEntity.bookId;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2022-10-23T22:09:22.426240715+09:00", comments="Source field: book.author")
+    @Generated(value = "org.mybatis.generator.api.MyBatisGenerator", date = "2022-12-06T23:23:42.811037595+09:00", comments = "Source field: book.author")
     public static final SqlColumn<String> author = bookEntity.author;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2022-10-23T22:09:22.426300733+09:00", comments="Source field: book.description")
+    @Generated(value = "org.mybatis.generator.api.MyBatisGenerator", date = "2022-12-06T23:23:42.811071027+09:00", comments = "Source field: book.description")
     public static final SqlColumn<String> description = bookEntity.description;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2022-10-23T22:09:22.42634286+09:00", comments="Source field: book.image_url")
+    @Generated(value = "org.mybatis.generator.api.MyBatisGenerator", date = "2022-12-06T23:23:42.811097968+09:00", comments = "Source field: book.image_url")
     public static final SqlColumn<String> imageUrl = bookEntity.imageUrl;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2022-10-23T22:09:22.426391828+09:00", comments="Source field: book.publish_date")
+    @Generated(value = "org.mybatis.generator.api.MyBatisGenerator", date = "2022-12-06T23:23:42.811129493+09:00", comments = "Source field: book.publish_date")
     public static final SqlColumn<LocalDate> publishDate = bookEntity.publishDate;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2022-10-23T22:09:22.426432379+09:00", comments="Source field: book.publisher")
+    @Generated(value = "org.mybatis.generator.api.MyBatisGenerator", date = "2022-12-06T23:23:42.811156729+09:00", comments = "Source field: book.publisher")
     public static final SqlColumn<String> publisher = bookEntity.publisher;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2022-10-23T22:09:22.426471482+09:00", comments="Source field: book.status")
+    @Generated(value = "org.mybatis.generator.api.MyBatisGenerator", date = "2022-12-06T23:23:42.811181303+09:00", comments = "Source field: book.status")
     public static final SqlColumn<Integer> status = bookEntity.status;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2022-10-23T22:09:22.426508286+09:00", comments="Source field: book.title")
+    @Generated(value = "org.mybatis.generator.api.MyBatisGenerator", date = "2022-12-06T23:23:42.81120168+09:00", comments = "Source field: book.title")
     public static final SqlColumn<String> title = bookEntity.title;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2022-10-23T22:09:22.425601358+09:00", comments="Source Table: book")
+    @Generated(value = "org.mybatis.generator.api.MyBatisGenerator", date = "2022-12-06T23:23:42.810701993+09:00", comments = "Source Table: book")
     public static final class BookEntity extends AliasableSqlTable<BookEntity> {
         public final SqlColumn<String> bookId = column("book_id", JDBCType.VARCHAR);
 

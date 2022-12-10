@@ -25,11 +25,11 @@ public class BaseBatchApplication {
     }
 
     /**
-     * Job launch, Every 7 am.
+     * Job launch, Every 5 am.
      *
      * @throws Exception failed to launch
      */
-    @Scheduled(cron = "0 0 7 * * *", zone = "Asia/Tokyo")
+    @Scheduled(cron = "0 0 5 * * *", zone = "Asia/Tokyo")
     public void perform() throws Exception {
         JobParameters params = new JobParametersBuilder()
                 .addString("JobID", String.valueOf(System.currentTimeMillis()))
