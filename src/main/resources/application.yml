@@ -19,17 +19,22 @@ spring:
   output:
     ansi:
       enabled: always
+  # Redis
+  redis:
+    host: 127.0.0.1
+    port: 6379
   # Mail
   mail:
-    host: localhost
-    username:
+    host: stmp.gmail.com
+    username: spring-base-batch@gmail.com
     password:
+    port: 587
     properties:
       mail:
         transport:
           protocol: smtp
         smtp:
           port: 1025
-api:
-  mail:
-    from: app@example.com
+
+redis:
+  key: return-book

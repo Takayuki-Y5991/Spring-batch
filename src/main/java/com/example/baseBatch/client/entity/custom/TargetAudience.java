@@ -1,4 +1,4 @@
-package com.example.baseBatch.domain;
+package com.example.baseBatch.client.entity.custom;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -18,11 +18,15 @@ public class TargetAudience {
     /**
      * Book name
      */
-    private String bookName;
+    private String title;
+    /**
+     * Member Id
+     */
+    private Long memberId;
     /**
      * Account name, to rental book
      */
-    private String accountName;
+    private String name;
     /**
      * Account Email
      */
